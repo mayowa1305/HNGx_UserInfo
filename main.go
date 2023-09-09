@@ -17,7 +17,7 @@ type Response struct {
 	StatusCode     int    `json:"status_code"`
 }
 
-func getInfo(w http.ResponseWriter, r *http.Request) {
+func api(w http.ResponseWriter, r *http.Request) {
 	slackName := "Adeyinka Boluwatife"
 	Track := "backend"
 
@@ -42,7 +42,7 @@ func getInfo(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/get_info", getInfo)
+	http.HandleFunc("/api", api)
 
 	fmt.Println("server running on :8080")
 	http.ListenAndServe(":8080", nil)
