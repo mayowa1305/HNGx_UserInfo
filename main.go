@@ -23,8 +23,8 @@ func getInfo(w http.ResponseWriter, r *http.Request) {
 
 	CurrentDay := time.Now().UTC().Format("Monday")
 	currentTime := time.Now().UTC().Format("2006-01-02T15:04:05Z")
-	GithubFileUrl := ""
-	GithubUrl := ""
+	GithubFileUrl := "https://github.com/mayowa1305/HNGx_UserInfo/blob/main/main.go"
+	GithubUrl := "https://github.com/mayowa1305/HNGx_UserInfo"
 
 	response := Response{
 		SlackName:      slackName,
